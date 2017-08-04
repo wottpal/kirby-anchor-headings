@@ -16,6 +16,8 @@ _Coming Soon_ ([submit your demo](https://twitter.com/wottpal))
 
 ![Demo of Kirby Anchor-Headings](demo.gif)
 
+Please dive into this [advanced use case](ADVANCED.md) if you want to build something like the GIF above.
+
 
 # Installation
 
@@ -73,6 +75,7 @@ key               | default | description
 
 You can use the following template-literals in your markup: `{id}`, `{enum}` and `{heading}`. I think they are self-explanatory, but feel free to reach out if you need further guidance.
 
+#### [Advanced Markup & Styling](ADVANCED.md)
 
 # Changelog
 
@@ -81,7 +84,7 @@ Have a look at the [releases page](https://github.com/wottpal/kirby-anchor-headi
 
 # Roadmap
 
-- [ ] Add an example with advanced markup & styling to the `README.md`
+- [x] Add an [example with advanced markup](ADVANCED.md) & styling to the `README.md`
 - [ ] Allow non integer values for `enum.start` like `A` or `i` and conitnue enumeration with this style.
 
 
