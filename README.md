@@ -1,6 +1,10 @@
 # ⚓ Kirby Anchor-Headings by [@wottpal](https://twitter.com/wottpal)
 
-<!-- Buttons --> ![Release](https://img.shields.io/github/release/wottpal/kirby-anchor-headings/all.svg) [![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/wottpal/kirby-video/master/LICENSE) [![Tweet](https://img.shields.io/twitter/url/https/github.com/wottpal/kirby-anchor-headings.svg?style=social)](https://twitter.com/intent/tweet?text=⚓ Anchor-Headings for @getkirby by @wottpal&url=https://git.io/v7aFU)
+<!-- Buttons -->
+![Release](https://img.shields.io/github/release/wottpal/kirby-lightbox-gallery/all.svg)
+[![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/wottpal/kirby-lightbox-gallery/master/LICENSE)
+[![Tweet](https://img.shields.io/twitter/url/https/github.com/wottpal/kirby-lightbox-gallery.svg?style=social)](https://twitter.com/intent/tweet?text=&#x2693;&#x20;&#x41;&#x6E;&#x63;&#x68;&#x6F;&#x72;&#x2D;&#x48;&#x65;&#x61;&#x64;&#x69;&#x6E;&#x67;&#x73;&#x20;&#x66;&#x6F;&#x72;&#x20;&#x40;&#x67;&#x65;&#x74;&#x6B;&#x69;&#x72;&#x62;&#x79;&#x20;&#x62;&#x79;&#x20;&#x40;&#x77;&#x6F;&#x74;&#x74;&#x70;&#x61;&#x6C;&url=https://git.io/v7aFU)
+
 
 (_Disclaimer:_ This is a pre-release.)
 
