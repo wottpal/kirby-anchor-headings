@@ -14,6 +14,8 @@ A field-method for the [Kirby CMS](https://getkirby.com) which automagically enu
 
 _Coming Soon_ ([submit your demo](https://twitter.com/wottpal))
 
+![Demo of Kirby Anchor-Headings](demo.gif)
+
 
 # Installation
 
@@ -79,7 +81,6 @@ Have a look at the [releases page](https://github.com/wottpal/kirby-anchor-headi
 
 # Roadmap
 
-- [ ] Add an explanatory screenshot/gif to the `README.md`
 - [ ] Add an example with advanced markup & styling to the `README.md`
 - [ ] Allow non integer values for `enum.start` like `A` or `i` and conitnue enumeration with this style.
 
