@@ -6,10 +6,13 @@
  * and regex replacement-rules.
  */
 function buildID($options, $enum, $text) {
-  $id = $options['id_prepend_enum'] ? $enum . $text : $text;
+  $id = $text;
+  if ($options['id_prepend_enum']) $id = $enum . $options['enum_seperator'] . $id;
+
   foreach($options['id_rules'] as $pattern => $replacement) {
     $id = preg_replace($pattern, $replacement, $id);
   }
+
   return $id;
 }
 
