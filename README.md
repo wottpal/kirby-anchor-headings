@@ -85,6 +85,7 @@ Have a look at the [releases page](https://github.com/wottpal/kirby-anchor-headi
 # Roadmap
 
 - [x] Add an [example with advanced markup](ADVANCED.md) & styling to the `README.md`
+- [ ] Improve ID generation by collapsing consecutive '-' to one 
 - [ ] Allow non integer values for `enum.start` like `A` or `i` and conitnue enumeration with this style.
 
 
