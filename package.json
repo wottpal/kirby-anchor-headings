@@ -2,7 +2,7 @@
   "name": "anchor-headings",
   "description": "A kirby field-method which enumerates heading-elements, generates IDs for anchor-links and inserts custom markup based on your needs.",
   "author": "Dennis Kerzig <hi@wottpal.com> (https://wottpal.com)",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "kirby-plugin",
   "license": "MIT"
 }

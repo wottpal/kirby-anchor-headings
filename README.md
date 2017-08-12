@@ -47,9 +47,15 @@ key               | default | description
 `heading.max`     | `3`     | The `<h>`-level to _end_ enumeration.
 `enum.start`      | `1`  | Integer to start enumeration on each level.
 `enum.seperator`  | `'.'` | Seperator for enumeration-levels.
+`id.prefix` | `false` | A string all IDs get prefixed with (before the enumeration).
 `id.prepend.enum` | `true` | If the enumeration should be part of the generated ID.
 `id.rules`        | _(see below)_ | A dictionary of reg. expressions and their respective replacements. (They will be applied in the given order.)
 `markup`          | _(see below)_ | A template-string which defines the new inner-markup of each heading-element
+
+
+#### Set `id.prefix`
+
+Even if `id.prefix` defaults to `false` I encourage you to set it to something like `section-` to prevent namespace-conflicts all over your site.
 
 
 #### Default of `id.rules`
@@ -63,7 +69,10 @@ key               | default | description
   '/Ä/' => 'Ae', '/Ö/' => 'Oe', '/Ü/' => 'Ue',
   '/ß/' => 'ss', '/ẞ/' => 'SS',
   // remove all remaining characters that are not letters/digits
-  '/[^A-Za-z0-9\-]/' => ''
+  '/[^A-Za-z0-9\-]/' => '',
+  // remove trailing hyphens and squash multiple occurences
+  '/-+$/' => '',
+  '/-{2,}/' => '-',
 ]
 ```
 
@@ -85,7 +94,7 @@ Have a look at the [releases page](https://github.com/wottpal/kirby-anchor-headi
 # Roadmap
 
 - [x] Add an [example with advanced markup](ADVANCED.md) & styling to the `README.md`
-- [ ] Improve ID generation by collapsing consecutive '-' to one 
+- [x] Improve ID generation by collapsing consecutive '-' to one 
 - [ ] Allow non integer values for `enum.start` like `A` or `i` and conitnue enumeration with this style.
 
 

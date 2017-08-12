@@ -6,7 +6,7 @@
 *
 * @package   Kirby CMS
 * @author    Dennis Kerzig <hi@wottpal.com>
-* @version   0.1.0
+* @version   0.2.0
 *
 */
 
@@ -23,13 +23,16 @@ function headingAnchors($field)
     'heading_max' => c::get('anchorheadings.heading.max', 3),
     'enum_start' => c::get('anchorheadings.enum.start', 1),
     'enum_seperator' => c::get('anchorheadings.enum.seperator', "."),
+    'id_prefix' => c::get('anchorheadings.id.prefix', false),
     'id_prepend_enum' => c::get('anchorheadings.id.prepend.enum', true),
     'id_rules' => c::get('anchorheadings.id.rules', [
       '/[_ ~\/,.]/' => '-',
       '/ä/' => 'ae', '/ö/' => 'oe', '/ü/' => 'ue',
       '/Ä/' => 'Ae', '/Ö/' => 'Oe', '/Ü/' => 'Ue',
       '/ß/' => 'ss', '/ẞ/' => 'SS',
-      '/[^A-Za-z0-9\-]/' => ''
+      '/[^A-Za-z0-9\-]/' => '',
+      '/-+$/' => '',
+      '/-{2,}/' => '-',
     ]),
     'markup' => c::get('anchorheadings.markup', "
     <a href='#{id}'>{enum}.</a> {heading}

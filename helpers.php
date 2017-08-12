@@ -13,6 +13,8 @@ function buildID($options, $enum, $text) {
     $id = preg_replace($pattern, $replacement, $id);
   }
 
+  if ($options['id_prefix']) $id = $options['id_prefix'] . $id;
+
   return $id;
 }
 
@@ -26,7 +28,7 @@ function insertAnchors($options)
   $h_counter = array_fill($options['heading_min'], $options['heading_max'], --$options['enum_start']);
   $h_pattern = "/h[${options['heading_min']}..${options['heading_max']}]/i";
 
-  foreach (pq(':headers') as $h) {
+  foreach (pq(':header') as $h) {
     // Determine tagname and ensure it's within range
     $tagname = pq($h)->get(0)->tagName;
     if (!preg_match($h_pattern, $tagname)) continue;
