@@ -10,13 +10,15 @@
 
 A field-method for the [Kirby CMS](https://getkirby.com) which automagically enumerates your headings, generates IDs for them and inserts matching anchor links. Customizable to it's core. 🤘
 
-# Demos
-
-_Coming Soon_ ([submit your demo](https://twitter.com/wottpal))
-
 ![Demo of Kirby Anchor-Headings](demo.gif)
 
-Please dive into this [advanced use case](ADVANCED.md) if you want to build something like the GIF above.
+*Note:* Please dive into this [advanced use case](ADVANCED.md) if you want to build something like the GIF above.
+
+
+# Demos
+
+* [wottpal.com](http://wottpal.com/items/kirby-anchor-headings) (my personal site)
+* **[Submit yours](https://twitter.com/wottpal)**
 
 
 # Installation
@@ -94,7 +96,7 @@ Have a look at the [releases page](https://github.com/wottpal/kirby-anchor-headi
 # Roadmap
 
 - [x] Add an [example with advanced markup](ADVANCED.md) & styling to the `README.md`
-- [x] Improve ID generation by collapsing consecutive '-' to one 
+- [x] Improve ID generation by collapsing consecutive '-' to one
 - [ ] Allow non integer values for `enum.start` like `A` or `i` and conitnue enumeration with this style.
 
 
@@ -104,7 +106,7 @@ Just kidding. This plugin is totally free. Please consider following [me](https:
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/wottpal.svg?style=social&label=Follow)](https://twitter.com/wottpal)
 
-You can also check out one of my other Kirby-plugins:
+You can also check out one of [my other Kirby-plugins](https://wottpal.com/items/my-kirby-plugins):
 
 * [Lightbox-Gallery](https://github.com/wottpal/kirby-lightbox-gallery) - Easily inline beautifully aligned galleries with lightbox-support powered by PhotoSwipe.
 * [HTML5-Video Kirbytag](https://github.com/wottpal/kirby-video) - Adds a kirbytag for embedding HTML5-videos with a variety of features.
