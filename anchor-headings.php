@@ -6,7 +6,7 @@
 *
 * @package   Kirby CMS
 * @author    Dennis Kerzig <hi@wottpal.com>
-* @version   0.2.0
+* @version   0.3.0
 *
 */
 
@@ -33,6 +33,7 @@ function headingAnchors($field)
       '/[^A-Za-z0-9\-]/' => '',
       '/-+$/' => '',
       '/-{2,}/' => '-',
+      '/([A-Z]+)/' => function($x) { return strtolower($x[1]); }
     ]),
     'markup' => c::get('anchorheadings.markup', "
     <a href='#{id}'>{enum}.</a> {heading}

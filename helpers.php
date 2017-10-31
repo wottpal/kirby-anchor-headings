@@ -10,7 +10,12 @@ function buildID($options, $enum, $text) {
   if ($options['id_prepend_enum']) $id = $enum . $options['enum_seperator'] . $id;
 
   foreach($options['id_rules'] as $pattern => $replacement) {
-    $id = preg_replace($pattern, $replacement, $id);
+    if (is_callable($replacement)) {
+      $id = preg_replace_callback($pattern, $replacement, $id);
+    } else {
+      $id = preg_replace($pattern, $replacement, $id);
+    }
+
   }
 
   if ($options['id_prefix']) $id = $options['id_prefix'] . $id;

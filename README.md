@@ -62,6 +62,10 @@ Even if `id.prefix` defaults to `false` I encourage you to set it to something l
 
 #### Default of `id.rules`
 
+You can either pass a regular expression as the replacement or a callback-function. They will be used with `preg_replace_callback` or `preg_replace`, respectively.
+
+
+
 ```php
 [
   // characters to replace with an hyphen
@@ -75,6 +79,8 @@ Even if `id.prefix` defaults to `false` I encourage you to set it to something l
   // remove trailing hyphens and squash multiple occurences
   '/-+$/' => '',
   '/-{2,}/' => '-',
+  // convert everything to lowercase (using a callback-function)
+  '/([A-Z]+)/' => function($x) { return strtolower($x[1]); }
 ]
 ```
 
