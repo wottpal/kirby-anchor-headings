@@ -45,6 +45,7 @@ The following options can be set globally in your `config.php` with `c::set($key
 
 key               | default | description
 ----------------- | ------- | ------------------------------------------------
+`toplevel.only`   | `true`  | Nested headings are ignored. 
 `heading.min`     | `2`     | The `<h>`-level to _begin_ enumeration.
 `heading.max`     | `3`     | The `<h>`-level to _end_ enumeration.
 `enum.start`      | `1`  | Integer to start enumeration on each level.

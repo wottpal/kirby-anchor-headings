@@ -32,8 +32,9 @@ function insertAnchors($options)
 {
   $h_counter = array_fill($options['heading_min'], $options['heading_max'], --$options['enum_start']);
   $h_pattern = "/h[${options['heading_min']}..${options['heading_max']}]/i";
+  $h_query = $options['toplevel_only'] ? '> *:header' : '*:header';
 
-  foreach (pq(':header') as $h) {
+  foreach (pq($h_query) as $h) {
     // Determine tagname and ensure it's within range
     $tagname = pq($h)->get(0)->tagName;
     if (!preg_match($h_pattern, $tagname)) continue;

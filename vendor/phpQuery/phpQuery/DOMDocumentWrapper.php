@@ -152,7 +152,7 @@ class DOMDocumentWrapper {
 		// @see http://www.w3.org/International/O-HTTP-charset
 		if (! $documentCharset) {
 			$documentCharset = 'ISO-8859-1';
-			$addDocumentCharset = true;
+			$addDocumentCharset = true;	
 		}
 		// Should be careful here, still need 'magic encoding detection' since lots of pages have other 'default encoding'
 		// Worse, some pages can have mixed encodings... we'll try not to worry about that
@@ -439,7 +439,7 @@ class DOMDocumentWrapper {
 //					if ($fake === false)
 //						throw new Exception("Error loading documentFragment markup");
 //					else
-//						$return = array_merge($return,
+//						$return = array_merge($return, 
 //							$this->import($fake->root->childNodes)
 //						);
 //				} else {

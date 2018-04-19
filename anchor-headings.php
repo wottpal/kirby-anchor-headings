@@ -6,12 +6,13 @@
 *
 * @package   Kirby CMS
 * @author    Dennis Kerzig <hi@wottpal.com>
-* @version   0.3.1
+* @version   0.4.0
 *
 */
 
 
-include_once __DIR__ . DS . 'vendor' . DS . 'phpQuery.php'; // http://bit.ly/2vvZ3GX
+// https://github.com/slaith/phpQuery
+include_once __DIR__ . DS . 'vendor' . DS . 'phpQuery'. DS . 'phpQuery.php';
 include_once __DIR__ . DS . 'helpers.php';
 
 
@@ -19,6 +20,7 @@ function headingAnchors($field)
 {
   // Options (see `README.md`)
   $options = [
+    'toplevel_only' => c::get('anchorheadings.toplevel.only', true),
     'heading_min' => c::get('anchorheadings.heading.min', 2),
     'heading_max' => c::get('anchorheadings.heading.max', 3),
     'enum_start' => c::get('anchorheadings.enum.start', 1),
