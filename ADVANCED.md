@@ -19,7 +19,7 @@ Add the code below to your `config.php`. All strings wrapped with curly braces a
 ```php
 $markup = <<<'EOT'
 <!-- Actual Anchor -->
-<a href='#{id}' class='anchor-link'>
+<a href='#{{id}}' class='anchor-link'>
 
 <!-- SVG-Icon -->
 <!-- NOTE: In a real-world use case you would probably save it somewhere else and reference it here -->
@@ -28,10 +28,10 @@ $markup = <<<'EOT'
 </svg>
 
 <!-- Enumeration -->
-<div>{enum}</div>
+<div>{{enum}}</div>
 </a>
 <!-- Actual Heading -->
-{heading}
+{{heading}}
 EOT;
 
 c::set('anchorheadings.markup', $markup);

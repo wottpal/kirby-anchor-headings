@@ -1,5 +1,7 @@
 <?php
 
+use Kirby\Toolkit\Str as Str;
+
 
 /**
  * This function generates an ID from the given text based on the given options
@@ -55,7 +57,7 @@ function insertAnchors($options)
     pq($h)->attr('id', $id);
 
     // Generate new markup and set it inside the heading-element
-    pq($h)->html(str::template($options['markup'], [
+    pq($h)->html(Str::template($options['markup'], [
       'heading' => pq($h)->html(),
       'id' => $id,
       'enum' => $enum

@@ -1,14 +1,13 @@
 # ⚓ Kirby Anchor-Headings by [@wottpal](https://twitter.com/wottpal)
 
 <!-- Buttons -->
+![MIT](https://img.shields.io/badge/Kirby-3-green.svg)
 ![Release](https://img.shields.io/github/release/wottpal/kirby-anchor-headings/all.svg)
 [![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/wottpal/kirby-anchor-headings/master/LICENSE)
 [![Tweet](https://img.shields.io/twitter/url/https/github.com/wottpal/kirby-anchor-headings.svg?style=social)](https://twitter.com/intent/tweet?text=&#x2693;&#x20;&#x41;&#x6E;&#x63;&#x68;&#x6F;&#x72;&#x2D;&#x48;&#x65;&#x61;&#x64;&#x69;&#x6E;&#x67;&#x73;&#x20;&#x66;&#x6F;&#x72;&#x20;&#x40;&#x67;&#x65;&#x74;&#x6B;&#x69;&#x72;&#x62;&#x79;&#x20;&#x62;&#x79;&#x20;&#x40;&#x77;&#x6F;&#x74;&#x74;&#x70;&#x61;&#x6C;&url=https://git.io/v7aFU)
 
 
-(_Disclaimer:_ This is a pre-release.)
-
-A field-method for the [Kirby CMS](https://getkirby.com) which automagically enumerates your headings, generates IDs for them and inserts matching anchor links. Customizable to it's core. 🤘
+A [Kirby 3](https://getkirby.com) field-method for the which automagically enumerates your headings, generates IDs for them and inserts matching anchor links. Customizable to it's core. 🤘
 
 ![Demo of Kirby Anchor-Headings](demo.gif)
 
@@ -23,7 +22,7 @@ A field-method for the [Kirby CMS](https://getkirby.com) which automagically enu
 
 # Installation
 
-Use [Kirby's CLI](https://github.com/getkirby/cli) and install the plugin via: `kirby plugin:install wottpal/kirby-anchor-headings` or place the repo manually under `site/plugins`.
+Just put the folder under `site/plugins` or add it as a git submodule via `git submodule add https://github.com/wottpal/kirby-anchor-headings site/plugins/kirby-anchor-headings`.
 
 🎉 **That's it.**
 
@@ -45,7 +44,7 @@ The following options can be set globally in your `config.php` with `c::set($key
 
 key               | default | description
 ----------------- | ------- | ------------------------------------------------
-`toplevel.only`   | `true`  | Nested headings are ignored. 
+`toplevel.only`   | `true`  | Nested headings are ignored.
 `heading.min`     | `2`     | The `<h>`-level to _begin_ enumeration.
 `heading.max`     | `3`     | The `<h>`-level to _end_ enumeration.
 `enum.start`      | `1`  | Integer to start enumeration on each level.
@@ -88,12 +87,13 @@ You can either pass a regular expression as the replacement or a callback-functi
 #### Default of `markup`
 
 ```html
-<a href='#{id}'>{enum}.</a> {heading}
+<a href='#{{id}}'>{{enum}}.</a> {{heading}}
 ```
 
-You can use the following template-literals in your markup: `{id}`, `{enum}` and `{heading}`. I think they are self-explanatory, but feel free to reach out if you need further guidance.
+You can use the following template-literals in your markup: `{{id}}`, `{{enum}}` and `{{heading}}`. I think they are self-explanatory, but feel free to reach out if you need further guidance.
 
 #### [Advanced Markup & Styling](ADVANCED.md)
+
 
 # Changelog
 
